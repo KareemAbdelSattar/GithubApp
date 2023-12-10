@@ -1,6 +1,8 @@
 import Foundation
 
 struct User: Codable, Identifiable, Hashable {
+    static let userMock = User(login: "kareem", id: 1, avatarURL: "", type: .user)
+
     let login: String
     let id: Int
     let avatarURL: String

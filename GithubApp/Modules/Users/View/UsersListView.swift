@@ -12,8 +12,8 @@ struct UsersListView: View {
                     List {
                         ForEach(viewModel.users, id: \.self) { user in
                             ZStack(alignment:.leading) {
-                                     NavigationLink(destination: UserDetailsView()) { EmptyView() }.opacity(0.0)
-                                UserRow(user: user)
+                                NavigationLink(destination: UserDetailsView(viewModel: UserDetailsViewModel(username: user.login))) { EmptyView() }.opacity(0.0)
+                                UserRow(image: user.avatarURL, name: user.login, type: user.type.rawValue)
                             }
                         }
                     }

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0F89682B2613D1003DDFE9 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89672B2613D1003DDFE9 /* UserDetailsViewModel.swift */; };
+		EB0F896B2B261A18003DDFE9 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F896A2B261A18003DDFE9 /* UserDetails.swift */; };
+		EB0F896D2B261F8B003DDFE9 /* UserDetailsInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F896C2B261F8B003DDFE9 /* UserDetailsInfoView.swift */; };
+		EB0F896F2B261FAA003DDFE9 /* DetailsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F896E2B261FAA003DDFE9 /* DetailsSectionView.swift */; };
+		EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */; };
+		EB0F89732B261FFC003DDFE9 /* IconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */; };
+		EB0F89752B26200E003DDFE9 /* IconLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89742B26200E003DDFE9 /* IconLinkView.swift */; };
 		EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D592B23CEFC00028B24 /* GithubApp.swift */; };
 		EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */; };
 		EBD77D602B23CEFF00028B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */; };
@@ -42,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0F89672B2613D1003DDFE9 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		EB0F896A2B261A18003DDFE9 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		EB0F896C2B261F8B003DDFE9 /* UserDetailsInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInfoView.swift; sourceTree = "<group>"; };
+		EB0F896E2B261FAA003DDFE9 /* DetailsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSectionView.swift; sourceTree = "<group>"; };
+		EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowersFollowingView.swift; sourceTree = "<group>"; };
+		EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleView.swift; sourceTree = "<group>"; };
+		EB0F89742B26200E003DDFE9 /* IconLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLinkView.swift; sourceTree = "<group>"; };
 		EBD77D562B23CEFC00028B24 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD77D592B23CEFC00028B24 /* GithubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApp.swift; sourceTree = "<group>"; };
 		EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
@@ -88,6 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB0F89662B2613C3003DDFE9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB0F89672B2613D1003DDFE9 /* UserDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB0F89692B261A0C003DDFE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB0F896A2B261A18003DDFE9 /* UserDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EBD77D4D2B23CEFC00028B24 = {
 			isa = PBXGroup;
 			children = (
@@ -211,9 +241,24 @@
 		EBD77DA12B24787A00028B24 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
-				EBD77DA22B2478EF00028B24 /* UserDetailsView.swift */,
+				EB0F89662B2613C3003DDFE9 /* ViewModel */,
+				EBD77DA42B24A42B00028B24 /* View */,
+				EB0F89692B261A0C003DDFE9 /* Model */,
 			);
 			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		EBD77DA42B24A42B00028B24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBD77DA22B2478EF00028B24 /* UserDetailsView.swift */,
+				EB0F896C2B261F8B003DDFE9 /* UserDetailsInfoView.swift */,
+				EB0F896E2B261FAA003DDFE9 /* DetailsSectionView.swift */,
+				EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */,
+				EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */,
+				EB0F89742B26200E003DDFE9 /* IconLinkView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,13 +396,20 @@
 			files = (
 				EBD77D9C2B23DE9300028B24 /* DefaultNetworking.swift in Sources */,
 				EBD77D8B2B23D75F00028B24 /* UserRow.swift in Sources */,
+				EB0F89732B261FFC003DDFE9 /* IconTitleView.swift in Sources */,
 				EBD77D8F2B23DC7F00028B24 /* UsersListViewModel.swift in Sources */,
 				EBD77D922B23DCAF00028B24 /* User.swift in Sources */,
 				EBD77DA32B2478EF00028B24 /* UserDetailsView.swift in Sources */,
 				EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */,
+				EB0F896B2B261A18003DDFE9 /* UserDetails.swift in Sources */,
+				EB0F89682B2613D1003DDFE9 /* UserDetailsViewModel.swift in Sources */,
+				EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */,
+				EB0F896D2B261F8B003DDFE9 /* UserDetailsInfoView.swift in Sources */,
 				EBD77D9E2B24701B00028B24 /* HomeView.swift in Sources */,
 				EBD77D9A2B23DE6100028B24 /* UserNetworking.swift in Sources */,
+				EB0F896F2B261FAA003DDFE9 /* DetailsSectionView.swift in Sources */,
 				EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */,
+				EB0F89752B26200E003DDFE9 /* IconLinkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

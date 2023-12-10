@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct UserRow: View {
-    var user: User
+    var image: String
+    var name: String
+    var type: String
     
     var body: some View {
         HStack(alignment: .top) {
-            AsyncImage(url: URL(string: user.avatarURL)) { image in
+            AsyncImage(url: URL(string: image)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -29,9 +31,9 @@ struct UserRow: View {
               
             
             VStack(alignment: .leading) {
-                Text(user.login)
+                Text(name)
                 
-                Text(user.type.rawValue)
+                Text(type)
                     .foregroundStyle(.gray)
                 
             }
@@ -40,5 +42,5 @@ struct UserRow: View {
 }
 
 #Preview {
-    UserRow(user: User(login: "Kareem", id: 1, avatarURL: "", type: .user))
+    UserRow(image: "", name: "kareem", type: "User")
 }
