@@ -2,8 +2,8 @@ import NetworkLayer
 import Foundation
 
 extension URLRequestType {
-    var baseURL: URL? {
-        URL(string: "https://api.github.com")
+    var baseURL: String {
+        "https://api.github.com"
     }
     
     var bodyParameters: [String: Any] {
@@ -25,10 +25,10 @@ extension URLRequestType {
 
 extension URLRequestConvertible where Self: URLRequestType {
     func asURLRequest() throws -> URLRequest {
-        guard let fullPath = baseURL?.appendingPathComponent(endPoint) else {
+        guard let fullPath = URL(string: baseURL + endPoint) else {
             throw NetworkError.invalidURL
+
         }
-        
         let urlComponents = URLComponents(url: fullPath, resolvingAgainstBaseURL: true)
         
         guard let url = urlComponents?.url else {

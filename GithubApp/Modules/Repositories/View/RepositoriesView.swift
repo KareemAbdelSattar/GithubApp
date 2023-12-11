@@ -12,29 +12,25 @@ struct RepositoriesView: View {
     
     var body: some View {
         NavigationView {
-            RepositoriesList(searchText: $viewModel.search)
+            VStack {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView()
+                case .empty:
+                    ErrorView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
+                case .loaded(let repositories):
+                    RepositoriesList(searchText: $viewModel.search, repositories: repositories)
+
+                }
+            }
+            .navigationTitle("Repositories")
+            .listStyle(.inset)
+            .searchable(text: $viewModel.search)
         }
     }
 }
+
 
 #Preview {
     RepositoriesView(viewModel: RepositoriesViewModel())
-}
-
-
-struct RepositoriesList: View {
-    @Binding var searchText: String
-    
-    
-    var body: some View {
-        List {
-            RepositoryRow()
-            RepositoryRow()
-            RepositoryRow()
-            
-        }
-        .listStyle(.inset)
-        .searchable(text: $searchText)
-        .navigationTitle("Repositories")
-    }
 }

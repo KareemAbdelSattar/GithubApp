@@ -8,34 +8,19 @@
 import SwiftUI
 
 struct RepositoryRow: View {
+    let repo: Repository
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Image(.github)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                    .clipShape(Circle())
-                
-                Text("Kareem")
-                    .font(.caption)
-                    .fontWeight(.light)
-            }
-            
-            Text("Alamofire")
-                .fontWeight(.medium)
-            
-            
-            Text("Next-generation take on pre/post function hooks")
-                .font(.callout)
-                .fontWeight(.light)
-                .lineLimit(3)
-            
-            IconTitleView(image: "star", title: "5")
+            OwnerInfoView(avatarURL: repo.owner.avatarURL, fullName: repo.fullName)
+
+            RepositoryInfoView(name: repo.name, description: repo.description)
+
+            AdditionalInfoView(starCount: repo.size ?? 0, language: repo.language)
         }
     }
 }
 
 #Preview {
-    RepositoryRow()
+    RepositoryRow(repo: Repository.dummy)
 }

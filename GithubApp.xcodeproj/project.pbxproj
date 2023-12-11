@@ -19,6 +19,14 @@
 		EB1207F02B27341F005AC783 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207EF2B27341F005AC783 /* Repository.swift */; };
 		EB1207F22B273C63005AC783 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F12B273C63005AC783 /* RepositoriesViewModel.swift */; };
 		EB1207F42B27457B005AC783 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F32B27457B005AC783 /* RepositoryRow.swift */; };
+		EB1207F62B274970005AC783 /* RepositoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F52B274970005AC783 /* RepositoriesList.swift */; };
+		EB1207F92B274A9A005AC783 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F82B274A9A005AC783 /* ErrorView.swift */; };
+		EB1207FB2B274D40005AC783 /* RepositoriesNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207FA2B274D40005AC783 /* RepositoriesNetworking.swift */; };
+		EB1207FF2B2756D0005AC783 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207FE2B2756D0005AC783 /* AsyncImage.swift */; };
+		EB1208022B275CE7005AC783 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1208012B275CE7005AC783 /* ViewState.swift */; };
+		EB1208042B275F57005AC783 /* OwnerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1208032B275F57005AC783 /* OwnerInfoView.swift */; };
+		EB1208062B275F70005AC783 /* RepositoryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1208052B275F70005AC783 /* RepositoryInfoView.swift */; };
+		EB1208082B275F96005AC783 /* AdditionalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1208072B275F96005AC783 /* AdditionalInfoView.swift */; };
 		EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D592B23CEFC00028B24 /* GithubApp.swift */; };
 		EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */; };
 		EBD77D602B23CEFF00028B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */; };
@@ -66,6 +74,14 @@
 		EB1207EF2B27341F005AC783 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EB1207F12B273C63005AC783 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		EB1207F32B27457B005AC783 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
+		EB1207F52B274970005AC783 /* RepositoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesList.swift; sourceTree = "<group>"; };
+		EB1207F82B274A9A005AC783 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EB1207FA2B274D40005AC783 /* RepositoriesNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesNetworking.swift; sourceTree = "<group>"; };
+		EB1207FE2B2756D0005AC783 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		EB1208012B275CE7005AC783 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		EB1208032B275F57005AC783 /* OwnerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerInfoView.swift; sourceTree = "<group>"; };
+		EB1208052B275F70005AC783 /* RepositoryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoView.swift; sourceTree = "<group>"; };
+		EB1208072B275F96005AC783 /* AdditionalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoView.swift; sourceTree = "<group>"; };
 		EBD77D562B23CEFC00028B24 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD77D592B23CEFC00028B24 /* GithubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApp.swift; sourceTree = "<group>"; };
 		EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
@@ -142,7 +158,11 @@
 			isa = PBXGroup;
 			children = (
 				EB1207EA2B2732CD005AC783 /* RepositoriesView.swift */,
+				EB1207F52B274970005AC783 /* RepositoriesList.swift */,
 				EB1207F32B27457B005AC783 /* RepositoryRow.swift */,
+				EB1208032B275F57005AC783 /* OwnerInfoView.swift */,
+				EB1208052B275F70005AC783 /* RepositoryInfoView.swift */,
+				EB1208072B275F96005AC783 /* AdditionalInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +181,23 @@
 				EB1207EF2B27341F005AC783 /* Repository.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EB1207F72B274A90005AC783 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EB1207F82B274A9A005AC783 /* ErrorView.swift */,
+				EB1207FE2B2756D0005AC783 /* AsyncImage.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EB1208002B275CDE005AC783 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EB1208012B275CE7005AC783 /* ViewState.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		EBD77D4D2B23CEFC00028B24 = {
@@ -189,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				EBD77D592B23CEFC00028B24 /* GithubApp.swift */,
+				EB1208002B275CDE005AC783 /* Common */,
 				EBD77D982B23DE4300028B24 /* Networking */,
 				EBD77D862B23D6EE00028B24 /* Modules */,
 				EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */,
@@ -225,6 +263,7 @@
 		EBD77D862B23D6EE00028B24 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EB1207F72B274A90005AC783 /* Common */,
 				EBD77D872B23D6FA00028B24 /* Users */,
 				EBD77DA12B24787A00028B24 /* UserDetails */,
 				EB1207E72B27326C005AC783 /* Repositories */,
@@ -280,6 +319,7 @@
 			children = (
 				EBD77D9B2B23DE9300028B24 /* DefaultNetworking.swift */,
 				EBD77D992B23DE6100028B24 /* UserNetworking.swift */,
+				EB1207FA2B274D40005AC783 /* RepositoriesNetworking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -446,9 +486,16 @@
 				EB0F89732B261FFC003DDFE9 /* IconTitleView.swift in Sources */,
 				EBD77D8F2B23DC7F00028B24 /* UsersListViewModel.swift in Sources */,
 				EBD77D922B23DCAF00028B24 /* User.swift in Sources */,
+				EB1207FF2B2756D0005AC783 /* AsyncImage.swift in Sources */,
 				EBD77DA32B2478EF00028B24 /* UserDetailsView.swift in Sources */,
 				EB1207EB2B2732CD005AC783 /* RepositoriesView.swift in Sources */,
+				EB1207F62B274970005AC783 /* RepositoriesList.swift in Sources */,
+				EB1208042B275F57005AC783 /* OwnerInfoView.swift in Sources */,
+				EB1208062B275F70005AC783 /* RepositoryInfoView.swift in Sources */,
+				EB1207F92B274A9A005AC783 /* ErrorView.swift in Sources */,
+				EB1208022B275CE7005AC783 /* ViewState.swift in Sources */,
 				EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */,
+				EB1208082B275F96005AC783 /* AdditionalInfoView.swift in Sources */,
 				EB0F896B2B261A18003DDFE9 /* UserDetails.swift in Sources */,
 				EB0F89682B2613D1003DDFE9 /* UserDetailsViewModel.swift in Sources */,
 				EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */,
@@ -462,6 +509,7 @@
 				EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */,
 				EB1207F22B273C63005AC783 /* RepositoriesViewModel.swift in Sources */,
 				EB0F89752B26200E003DDFE9 /* IconLinkView.swift in Sources */,
+				EB1207FB2B274D40005AC783 /* RepositoriesNetworking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
