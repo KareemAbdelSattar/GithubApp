@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct RepositoriesView: View {
+    @ObservedObject var viewModel: RepositoriesViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            RepositoriesList(searchText: $viewModel.search)
+        }
     }
 }
 
 #Preview {
-    RepositoriesView()
+    RepositoriesView(viewModel: RepositoriesViewModel())
+}
+
+
+struct RepositoriesList: View {
+    @Binding var searchText: String
+    
+    
+    var body: some View {
+        List {
+            RepositoryRow()
+            RepositoryRow()
+            RepositoryRow()
+            
+        }
+        .listStyle(.inset)
+        .searchable(text: $searchText)
+        .navigationTitle("Repositories")
+    }
 }

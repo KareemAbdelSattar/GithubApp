@@ -18,7 +18,7 @@ struct HomeView: View {
                     }
                 }
             
-            Text("Repo")
+            RepositoriesView(viewModel: RepositoriesViewModel())
                 .tabItem {
                       VStack {
                           Image(systemName: "book.pages.fill")
