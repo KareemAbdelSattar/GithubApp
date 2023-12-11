@@ -15,6 +15,8 @@
 		EB0F89732B261FFC003DDFE9 /* IconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */; };
 		EB0F89752B26200E003DDFE9 /* IconLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89742B26200E003DDFE9 /* IconLinkView.swift */; };
 		EB1207E62B273056005AC783 /* ProfileStatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207E52B273056005AC783 /* ProfileStatsList.swift */; };
+		EB1207EB2B2732CD005AC783 /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207EA2B2732CD005AC783 /* RepositoriesView.swift */; };
+		EB1207F02B27341F005AC783 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207EF2B27341F005AC783 /* Repository.swift */; };
 		EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D592B23CEFC00028B24 /* GithubApp.swift */; };
 		EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */; };
 		EBD77D602B23CEFF00028B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleView.swift; sourceTree = "<group>"; };
 		EB0F89742B26200E003DDFE9 /* IconLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLinkView.swift; sourceTree = "<group>"; };
 		EB1207E52B273056005AC783 /* ProfileStatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatsList.swift; sourceTree = "<group>"; };
+		EB1207EA2B2732CD005AC783 /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
+		EB1207EF2B27341F005AC783 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EBD77D562B23CEFC00028B24 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD77D592B23CEFC00028B24 /* GithubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApp.swift; sourceTree = "<group>"; };
 		EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,39 @@
 			isa = PBXGroup;
 			children = (
 				EB0F896A2B261A18003DDFE9 /* UserDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB1207E72B27326C005AC783 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				EB1207EC2B2733B4005AC783 /* View */,
+				EB1207ED2B2733B9005AC783 /* ViewModel */,
+				EB1207EE2B2733C7005AC783 /* Model */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		EB1207EC2B2733B4005AC783 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB1207EA2B2732CD005AC783 /* RepositoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB1207ED2B2733B9005AC783 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB1207EE2B2733C7005AC783 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB1207EF2B27341F005AC783 /* Repository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +221,7 @@
 			children = (
 				EBD77D872B23D6FA00028B24 /* Users */,
 				EBD77DA12B24787A00028B24 /* UserDetails */,
+				EB1207E72B27326C005AC783 /* Repositories */,
 				EBD77D9D2B24701B00028B24 /* HomeView.swift */,
 			);
 			path = Modules;
@@ -403,10 +441,12 @@
 				EBD77D8F2B23DC7F00028B24 /* UsersListViewModel.swift in Sources */,
 				EBD77D922B23DCAF00028B24 /* User.swift in Sources */,
 				EBD77DA32B2478EF00028B24 /* UserDetailsView.swift in Sources */,
+				EB1207EB2B2732CD005AC783 /* RepositoriesView.swift in Sources */,
 				EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */,
 				EB0F896B2B261A18003DDFE9 /* UserDetails.swift in Sources */,
 				EB0F89682B2613D1003DDFE9 /* UserDetailsViewModel.swift in Sources */,
 				EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */,
+				EB1207F02B27341F005AC783 /* Repository.swift in Sources */,
 				EB1207E62B273056005AC783 /* ProfileStatsList.swift in Sources */,
 				EB0F896D2B261F8B003DDFE9 /* UserDetailsInfoView.swift in Sources */,
 				EBD77D9E2B24701B00028B24 /* HomeView.swift in Sources */,
