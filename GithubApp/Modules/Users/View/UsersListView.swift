@@ -11,7 +11,10 @@ struct UsersListView: View {
                 } else {
                     List {
                         ForEach(viewModel.users, id: \.self) { user in
-                            UserRow(user: user)
+                            ZStack(alignment:.leading) {
+                                NavigationLink(destination: UserDetailsView(viewModel: UserDetailsViewModel(username: user.login))) { EmptyView() }.opacity(0.0)
+                                UserRow(image: user.avatarURL, name: user.login, type: user.type.rawValue)
+                            }
                         }
                     }
                     .listStyle(.plain)

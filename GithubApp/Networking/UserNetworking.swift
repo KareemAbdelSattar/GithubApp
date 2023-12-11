@@ -6,3 +6,16 @@ struct UserNetworking: URLRequestType {
         "/users"
     }
 }
+
+
+struct UserDetailsNetworking: URLRequestType {
+    private let username: String
+    
+    init(username: String) {
+        self.username = username
+    }
+    
+    var endPoint: String {
+        "/users/\(username)"
+    }
+}
