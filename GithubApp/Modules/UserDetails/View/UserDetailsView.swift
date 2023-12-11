@@ -4,13 +4,17 @@ struct UserDetailsView: View {
     @ObservedObject var viewModel: UserDetailsViewModel
     
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
             UserDetailsInfoView(userDetails: viewModel.userDetails)
+                .padding()
             
-            Spacer()
-        }.onAppear(perform: {
+            ProfileStatsList(userDetails: viewModel.userDetails)
+        }
+        .background(Color(.systemGray6))
+        .onAppear(perform: {
             viewModel.onAppear.send()
         })
+        
     }
 }
 

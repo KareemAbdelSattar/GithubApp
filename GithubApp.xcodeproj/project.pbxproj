@@ -14,6 +14,7 @@
 		EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */; };
 		EB0F89732B261FFC003DDFE9 /* IconTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */; };
 		EB0F89752B26200E003DDFE9 /* IconLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F89742B26200E003DDFE9 /* IconLinkView.swift */; };
+		EB1207E62B273056005AC783 /* ProfileStatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207E52B273056005AC783 /* ProfileStatsList.swift */; };
 		EBD77D5A2B23CEFC00028B24 /* GithubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D592B23CEFC00028B24 /* GithubApp.swift */; };
 		EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */; };
 		EBD77D602B23CEFF00028B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowersFollowingView.swift; sourceTree = "<group>"; };
 		EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleView.swift; sourceTree = "<group>"; };
 		EB0F89742B26200E003DDFE9 /* IconLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLinkView.swift; sourceTree = "<group>"; };
+		EB1207E52B273056005AC783 /* ProfileStatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStatsList.swift; sourceTree = "<group>"; };
 		EBD77D562B23CEFC00028B24 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD77D592B23CEFC00028B24 /* GithubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubApp.swift; sourceTree = "<group>"; };
 		EBD77D5B2B23CEFC00028B24 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				EBD77DA22B2478EF00028B24 /* UserDetailsView.swift */,
 				EB0F896C2B261F8B003DDFE9 /* UserDetailsInfoView.swift */,
 				EB0F896E2B261FAA003DDFE9 /* DetailsSectionView.swift */,
+				EB1207E52B273056005AC783 /* ProfileStatsList.swift */,
 				EB0F89702B261FD8003DDFE9 /* UserFollowersFollowingView.swift */,
 				EB0F89722B261FFC003DDFE9 /* IconTitleView.swift */,
 				EB0F89742B26200E003DDFE9 /* IconLinkView.swift */,
@@ -404,6 +407,7 @@
 				EB0F896B2B261A18003DDFE9 /* UserDetails.swift in Sources */,
 				EB0F89682B2613D1003DDFE9 /* UserDetailsViewModel.swift in Sources */,
 				EB0F89712B261FD8003DDFE9 /* UserFollowersFollowingView.swift in Sources */,
+				EB1207E62B273056005AC783 /* ProfileStatsList.swift in Sources */,
 				EB0F896D2B261F8B003DDFE9 /* UserDetailsInfoView.swift in Sources */,
 				EBD77D9E2B24701B00028B24 /* HomeView.swift in Sources */,
 				EBD77D9A2B23DE6100028B24 /* UserNetworking.swift in Sources */,

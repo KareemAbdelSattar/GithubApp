@@ -2,7 +2,7 @@ import SwiftUI
 
 struct UserDetailsInfoView: View {
     let userDetails: UserDetails?
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             if let userDetails = userDetails {
@@ -14,9 +14,10 @@ struct UserDetailsInfoView: View {
             }
             
             DetailsSectionView(userDetails: userDetails)
-            
-            Spacer()
-        }.padding()
+        }
     }
 }
 
+#Preview {
+    UserDetailsInfoView(userDetails: UserDetails.mock)
+}

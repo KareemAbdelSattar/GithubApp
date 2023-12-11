@@ -1,6 +1,8 @@
 import Foundation
 
 struct UserDetails: Codable, Identifiable, Hashable {
+    static let mock = UserDetails(login: "Kareem", id: 1, avatarURL: "", type: .user, name: "Kareem", company: "G7", blog: "", location: "", email: "aaaa", bio: "aeer", twitterUsername: "fkfk", publicRepos: 0, publicGists: 2, followers: 4, following: 2, createdAt: "", updatedAt: "")
+    
     let login: String
     let id: Int
     let avatarURL: String
