@@ -1,13 +1,9 @@
-//
-//  OwnerInfoView.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct OwnerInfoView: View {
+    
+    // MARK: Properties
+
     let avatarURL: String
     let fullName: String?
 

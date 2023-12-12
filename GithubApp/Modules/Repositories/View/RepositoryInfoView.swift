@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct RepositoryInfoView: View {
+    
+    // MARK: Properties
+
     let name: String?
     let description: String?
 

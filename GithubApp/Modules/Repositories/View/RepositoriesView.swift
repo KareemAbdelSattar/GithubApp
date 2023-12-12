@@ -1,13 +1,9 @@
-//
-//  RepositoriesView.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct RepositoriesView: View {
+    
+    // MARK: Properties
+    
     @ObservedObject var viewModel: RepositoriesViewModel
     
     var body: some View {

@@ -1,13 +1,9 @@
-//
-//  RepositoryRow.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct RepositoryRow: View {
+    
+    // MARK: Properties
+
     let repo: Repository
 
     var body: some View {
@@ -16,7 +12,7 @@ struct RepositoryRow: View {
 
             RepositoryInfoView(name: repo.name, description: repo.description)
 
-            AdditionalInfoView(starCount: repo.size ?? 0, language: repo.language)
+            AdditionalInfoView(starCount: repo.stargazersCount ?? 0, language: repo.language)
         }
     }
 }

@@ -3,16 +3,26 @@ import Combine
 import NetworkLayer
 
 final class RepositoriesViewModel: ObservableObject {
+    
+    // MARK: Properties
+    
     @Published var search: String = ""
     @Published var state: ViewState<[Repository]> = .empty
     
     private var subscriptions = Set<AnyCancellable>()
     
+    // MARK: Initializer
+    
     init() {
         binding()
     }
+}
+
+// MARK: - Private Handler
+
+private extension RepositoriesViewModel {
     
-    private func binding() {
+    func binding() {
         $search
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .receive(on: DispatchQueue.main) // Receive updates on main thread
@@ -28,7 +38,7 @@ final class RepositoriesViewModel: ObservableObject {
             .store(in: &subscriptions)
     }
     
-    private func fetchRepositories(search: String) async {
+    func fetchRepositories(search: String) async {
         changeState(.loading)
         
         do {
@@ -47,7 +57,7 @@ final class RepositoriesViewModel: ObservableObject {
         }
     }
     
-    private func changeState(_ state: ViewState<[Repository]>) {
+    func changeState(_ state: ViewState<[Repository]>) {
         DispatchQueue.main.async { [weak self] in
             self?.state = state
         }

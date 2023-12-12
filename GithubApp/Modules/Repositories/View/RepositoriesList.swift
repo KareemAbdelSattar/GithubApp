@@ -1,13 +1,9 @@
-//
-//  RepositoriesList.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct RepositoriesList: View {
+    
+    // MARK: Properties
+    
     @Binding var searchText: String
     let repositories: [Repository]
     
