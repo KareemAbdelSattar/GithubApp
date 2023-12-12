@@ -1,5 +1,4 @@
 import Foundation
-import NetworkLayer
 import Combine
 
 // MARK: - UserDetailsViewModelInput
@@ -34,8 +33,11 @@ final class UserDetailsViewModel: ObservableObject {
         self.userDetailsNetworking = userDetailsNetworking
         binding()
     }
-    
-    // MARK: Private Methods
+}
+
+// MARK: Private Handler
+
+private extension UserDetailsViewModel {
     
     /// Sets up bindings for the view model.
     private func binding() {
@@ -53,10 +55,18 @@ final class UserDetailsViewModel: ObservableObject {
             let userDetails = try await userDetailsNetworking.fetchUserDetails()
             // Update on the main thread
             DispatchQueue.main.async {
-                self.state = .loaded(userDetails)
+                self.changeState(.loaded(userDetails))
             }
         } catch {
-            self.state = .error(error.localizedDescription)
+            changeState(.error(error.localizedDescription))
+        }
+    }
+    
+    /// Updates the state property on the main thread.
+    /// - Parameter state: The new state to be applied.
+    func changeState(_ state: ViewState<UserDetails?>) {
+        DispatchQueue.main.async { [weak self] in
+            self?.state = state
         }
     }
 }
