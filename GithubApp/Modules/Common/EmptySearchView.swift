@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct EmptySearchView: View {
+    
+    // MARK: Properties
+    
     let title: String
     let image: String
     

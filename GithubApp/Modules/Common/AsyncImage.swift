@@ -1,6 +1,9 @@
 import SwiftUI
 
 struct CustomAsyncImage: View {
+    
+    // MARK: Properties
+    
     let image: String
     
     var body: some View {
