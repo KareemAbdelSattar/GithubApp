@@ -25,7 +25,6 @@ private extension RepositoriesViewModel {
     func binding() {
         $search
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .receive(on: DispatchQueue.main) // Receive updates on main thread
             .sink { [weak self] search in
                 guard let self, !search.isEmpty else {
                     self?.changeState(.empty)
