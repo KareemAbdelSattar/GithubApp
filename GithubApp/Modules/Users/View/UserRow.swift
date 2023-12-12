@@ -1,35 +1,26 @@
-//
-//  UserRow.swift
-//  HR
-//
-//  Created by Kareem Abd El Sattar on 09/12/2023.
-//
-
 import SwiftUI
 
 struct UserRow: View {
-    var image: String
-    var name: String
-    var type: String
+    
+    // MARK: - Properties
+    
+    let user: User
     
     var body: some View {
         HStack(alignment: .top) {
-            CustomAsyncImage(image: image)
+            CustomAsyncImage(image: user.avatarURL)
                 .frame(width: 50, height: 50)
             
-            
-            
             VStack(alignment: .leading) {
-                Text(name)
+                Text(user.login)
                 
-                Text(type)
+                Text(user.type.rawValue)
                     .foregroundStyle(.gray)
-                
             }
         }
     }
 }
 
 #Preview {
-    UserRow(image: "", name: "kareem", type: "User")
+    UserRow(user: User(login: "Kareem", id: 1, avatarURL: "", type: .user))
 }

@@ -1,10 +1,3 @@
-//
-//  AsyncImage.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct CustomAsyncImage: View {

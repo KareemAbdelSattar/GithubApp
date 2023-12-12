@@ -19,6 +19,7 @@ struct UserDetailsView: View {
                     .padding()
                 
                 ProfileStatsList(userDetails: userDetails)
+                
             case .error(let error):
                 // Show an error message if data fetching fails
                 // TODO: - Add Error Screen
@@ -29,7 +30,8 @@ struct UserDetailsView: View {
                 EmptyView()
             }
         }
-        .background(Color(.systemGray6))
+        .background(AppTheme.backgroundColor)
+        .toolbarTitleDisplayMode(.inline)
         .onAppear(perform: {
             // Trigger the onAppear action in the view model when the view appears
             viewModel.onAppear.send()
