@@ -31,3 +31,7 @@ struct DetailsSectionView: View {
     }
 }
 
+
+#Preview {
+    DetailsSectionView(userDetails: UserDetails.dummy)
+}

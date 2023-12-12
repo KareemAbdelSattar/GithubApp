@@ -16,10 +16,14 @@ struct ProfileStatsList: View {
             
             IconCountRow(image: "building.2", title: "Gists", count: userDetails?.publicGists, color: .orange)
         }
-        .listStyle(.inset)
+        .listStyle(.grouped)
         .scrollContentBackground(.hidden)
         .scrollDisabled(true)
     }
+}
+
+#Preview {
+    ProfileStatsList(userDetails: UserDetails.dummy)
 }
 
 struct IconCountRow: View {
