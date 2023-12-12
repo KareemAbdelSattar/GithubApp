@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ErrorView: View {
+struct EmptySearchView: View {
     let title: String
     let image: String
     
@@ -27,5 +27,5 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
+    EmptySearchView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
 }

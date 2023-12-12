@@ -20,7 +20,7 @@
 		EB1207F22B273C63005AC783 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F12B273C63005AC783 /* RepositoriesViewModel.swift */; };
 		EB1207F42B27457B005AC783 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F32B27457B005AC783 /* RepositoryRow.swift */; };
 		EB1207F62B274970005AC783 /* RepositoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F52B274970005AC783 /* RepositoriesList.swift */; };
-		EB1207F92B274A9A005AC783 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F82B274A9A005AC783 /* ErrorView.swift */; };
+		EB1207F92B274A9A005AC783 /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207F82B274A9A005AC783 /* EmptySearchView.swift */; };
 		EB1207FB2B274D40005AC783 /* RepositoriesNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207FA2B274D40005AC783 /* RepositoriesNetworking.swift */; };
 		EB1207FF2B2756D0005AC783 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1207FE2B2756D0005AC783 /* AsyncImage.swift */; };
 		EB1208022B275CE7005AC783 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1208012B275CE7005AC783 /* ViewState.swift */; };
@@ -75,7 +75,7 @@
 		EB1207F12B273C63005AC783 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		EB1207F32B27457B005AC783 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		EB1207F52B274970005AC783 /* RepositoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesList.swift; sourceTree = "<group>"; };
-		EB1207F82B274A9A005AC783 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EB1207F82B274A9A005AC783 /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
 		EB1207FA2B274D40005AC783 /* RepositoriesNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesNetworking.swift; sourceTree = "<group>"; };
 		EB1207FE2B2756D0005AC783 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		EB1208012B275CE7005AC783 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		EB1207F72B274A90005AC783 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EB1207F82B274A9A005AC783 /* ErrorView.swift */,
+				EB1207F82B274A9A005AC783 /* EmptySearchView.swift */,
 				EB1207FE2B2756D0005AC783 /* AsyncImage.swift */,
 			);
 			path = Common;
@@ -492,7 +492,7 @@
 				EB1207F62B274970005AC783 /* RepositoriesList.swift in Sources */,
 				EB1208042B275F57005AC783 /* OwnerInfoView.swift in Sources */,
 				EB1208062B275F70005AC783 /* RepositoryInfoView.swift in Sources */,
-				EB1207F92B274A9A005AC783 /* ErrorView.swift in Sources */,
+				EB1207F92B274A9A005AC783 /* EmptySearchView.swift in Sources */,
 				EB1208022B275CE7005AC783 /* ViewState.swift in Sources */,
 				EBD77D5C2B23CEFC00028B24 /* UsersListView.swift in Sources */,
 				EB1208082B275F96005AC783 /* AdditionalInfoView.swift in Sources */,

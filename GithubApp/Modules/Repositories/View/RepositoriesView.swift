@@ -13,7 +13,7 @@ struct RepositoriesView: View {
                 case .loading:
                     ProgressView()
                 case .empty:
-                    ErrorView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
+                    EmptySearchView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
                 case .loaded(let repositories):
                     RepositoriesList(searchText: $viewModel.search, repositories: repositories)
                 case .error(let error):
