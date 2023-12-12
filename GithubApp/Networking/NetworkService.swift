@@ -15,8 +15,7 @@ class NetworkService {
         urlRequest.httpMethod = request.method.rawValue
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        
-        
+            
         let urlResponse = response as? HTTPURLResponse
         try ResponseHelper.handle(urlResponse?.statusCode)
         

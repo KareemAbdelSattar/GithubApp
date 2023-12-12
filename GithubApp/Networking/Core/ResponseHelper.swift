@@ -13,7 +13,7 @@ struct ResponseHelper {
         case 500:
             throw NetworkError.serverError
         default:
-            throw NetworkError.failure
+            throw NetworkError.invalidStatusCode(response)
         }
     }
 }
