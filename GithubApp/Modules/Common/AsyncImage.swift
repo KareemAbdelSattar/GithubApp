@@ -10,7 +10,7 @@ struct CustomAsyncImage: View {
                 .aspectRatio(contentMode: .fit)
         } placeholder: {
             ZStack {
-                Color.gray.opacity(0.7)
+                Color.gray.opacity(0.2)
                 ProgressView()
             }
         }
