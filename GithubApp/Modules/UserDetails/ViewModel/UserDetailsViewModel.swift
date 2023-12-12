@@ -1,5 +1,4 @@
 import Foundation
-import NetworkLayer
 import Combine
 
 // MARK: - UserDetailsViewModelInput
@@ -34,9 +33,6 @@ final class UserDetailsViewModel: ObservableObject {
         self.userDetailsNetworking = userDetailsNetworking
         binding()
     }
-    
-    
-
 }
 
 // MARK: Private Handler

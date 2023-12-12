@@ -1,9 +1,11 @@
 import SwiftUI
 
+/// The main view of the application, containing tabs for Users, Repositories, and Profile.
 struct HomeView: View {
     
     var body: some View {
         TabView {
+            // Users Tab
             NavigationView(content: {
                 UsersView(viewModel: UsersListViewModel())
                     .navigationTitle("Users")
@@ -16,6 +18,7 @@ struct HomeView: View {
                 }
             }
             
+            // Repositories Tab
             NavigationView(content: {
                 let repositoriesNetworking = DefaultRepositoriesNetworking()
                 let repositoriesViewModel = RepositoriesViewModel(repositoriesNetworking: repositoriesNetworking)
@@ -30,6 +33,7 @@ struct HomeView: View {
                 }
             }
             
+            // Profile Tab
             NavigationView(content: {
                 let userDetailsNetworking = DefaultUserDetailsNetworking(username: "kareemabdelsattar")
                 let userDetailsViewModel = UserDetailsViewModel(userDetailsNetworking: userDetailsNetworking)
@@ -44,7 +48,7 @@ struct HomeView: View {
                 }
             }
         }
-        .accentColor(.purple)
+        .accentColor(.purple) // Set the accent color for the tabs
     }
 }
 

@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import NetworkLayer
 
 /// View model responsible for managing the state and data related to repositories.
 final class RepositoriesViewModel: ObservableObject {
