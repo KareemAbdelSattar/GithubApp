@@ -1,7 +1,27 @@
 import Foundation
 
+// MARK: - UserDetails
+
+/// Struct representing user details.
 struct UserDetails: Codable, Identifiable, Hashable {
-    static let mock = UserDetails(login: "Kareem", id: 1, avatarURL: "", type: .user, name: "Kareem", company: "G7", blog: "", location: "", email: "aaaa", bio: "aeer", twitterUsername: "fkfk", publicRepos: 0, publicGists: 2, followers: 4, following: 2, createdAt: "", updatedAt: "")
+    
+    /// A dummy instance for preview or testing purposes.
+    static let dummy = UserDetails(login: "Kareem",
+                                   id: 1,
+                                   avatarURL: "",
+                                   type: .user,
+                                   name: "Kareem",
+                                   company: "G7",
+                                   blog: "",
+                                   location: "",
+                                   email: "aaaa",
+                                   bio: "aeer",
+                                   twitterUsername: "fkfk",
+                                   publicRepos: 0,
+                                   publicGists: 2,
+                                   followers: 4,
+                                   following: 2
+    )
     
     let login: String
     let id: Int
@@ -13,7 +33,6 @@ struct UserDetails: Codable, Identifiable, Hashable {
     let location, email, bio: String?
     let twitterUsername: String?
     let publicRepos, publicGists, followers, following: Int
-    let createdAt, updatedAt: String
 
     enum CodingKeys: String, CodingKey {
         case login, id
@@ -24,7 +43,5 @@ struct UserDetails: Codable, Identifiable, Hashable {
         case publicRepos = "public_repos"
         case publicGists = "public_gists"
         case followers, following
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
     }
 }

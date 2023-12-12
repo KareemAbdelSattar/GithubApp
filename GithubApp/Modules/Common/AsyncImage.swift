@@ -1,13 +1,9 @@
-//
-//  AsyncImage.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
 struct CustomAsyncImage: View {
+    
+    // MARK: Properties
+    
     let image: String
     
     var body: some View {
@@ -17,7 +13,7 @@ struct CustomAsyncImage: View {
                 .aspectRatio(contentMode: .fit)
         } placeholder: {
             ZStack {
-                Color.gray.opacity(0.7)
+                Color.gray.opacity(0.2)
                 ProgressView()
             }
         }

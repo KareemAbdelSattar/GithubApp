@@ -11,7 +11,7 @@ struct User: Codable, Identifiable, Hashable {
     enum CodingKeys: String, CodingKey {
         case login
         case id
-        case avatarURL = "avatar_url"
+        case avatarURL = ""
         case type
     }
 }

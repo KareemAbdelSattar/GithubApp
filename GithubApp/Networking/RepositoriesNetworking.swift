@@ -1,13 +1,21 @@
-import NetworkLayer
+import Foundation
 
-struct RepositoriesNetworking: URLRequestType {
-    private let searchText: String
+protocol RepositoriesNetworking {
+    mutating func fetchRepositories(_ searchText: String) async throws -> RepositoryResponse
+}
+
+struct DefaultRepositoriesNetworking: RepositoriesNetworking, URLRequestType {
     
-    init(searchText: String) {
-        self.searchText = searchText
+    private let networkService: NetworkService
+    
+    init(networkService: NetworkService = .shared) {
+        self.networkService = networkService
     }
     
-    var endPoint: String {
-        "/search/repositories?q=\(searchText)"
+    var endPoint: String = "/search/repositories?q="
+    
+    mutating func fetchRepositories(_ searchText: String) async throws -> RepositoryResponse {
+        endPoint = endPoint + searchText
+        return try await networkService.request(self)
     }
 }

@@ -1,17 +1,39 @@
 import SwiftUI
 
+// MARK: UserDetailsView
+
 struct UserDetailsView: View {
+    
+    // MARK: Properties
+    
     @ObservedObject var viewModel: UserDetailsViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            UserDetailsInfoView(userDetails: viewModel.userDetails)
-                .padding()
-            
-            ProfileStatsList(userDetails: viewModel.userDetails)
+            switch viewModel.state {
+            case .loading:
+                ProgressView()
+            case .loaded(let userDetails):
+                // Display user details and profile stats
+                UserDetailsInfoView(userDetails: userDetails)
+                    .padding()
+                
+                ProfileStatsList(userDetails: userDetails)
+                
+            case .error(let error):
+                // Show an error message if data fetching fails
+                // TODO: - Add Error Screen
+                Text(error)
+            case .empty:
+                // Handle the case when there is no data to display
+                // TODO: - Handle Empty Case
+                EmptyView()
+            }
         }
-        .background(Color(.systemGray6))
+        .background(AppTheme.backgroundColor)
+        .toolbarTitleDisplayMode(.inline)
         .onAppear(perform: {
+            // Trigger the onAppear action in the view model when the view appears
             viewModel.onAppear.send()
         })
         
@@ -19,5 +41,7 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    UserDetailsView(viewModel: UserDetailsViewModel(username: "username"))
+    let userDetailsNetworking = DefaultUserDetailsNetworking(username: "kareem")
+    let viewModel = UserDetailsViewModel(userDetailsNetworking: userDetailsNetworking)
+    return UserDetailsView(viewModel: viewModel)
 }

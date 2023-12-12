@@ -1,6 +1,11 @@
 import SwiftUI
 
+// MARK: DetailsSectionView
+
 struct DetailsSectionView: View {
+    
+    // MARK: Properties
+
     let userDetails: UserDetails?
     
     var body: some View {

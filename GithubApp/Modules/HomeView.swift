@@ -1,16 +1,10 @@
-//
-//  HomeView.swift
-//  HR
-//
-//  Created by Kareem Abd El Sattar on 09/12/2023.
-//
-
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
         TabView {
-          UsersListView(viewModel: UsersListViewModel())
+            UsersView(viewModel: UsersListViewModel())
                 .tabItem {
                     VStack {
                         Image(systemName: "person")
@@ -18,22 +12,26 @@ struct HomeView: View {
                     }
                 }
             
-            RepositoriesView(viewModel: RepositoriesViewModel())
+            let repositoriesNetworking = DefaultRepositoriesNetworking()
+            let viewModel = RepositoriesViewModel(repositoriesNetworking: repositoriesNetworking)
+            RepositoriesView(viewModel: viewModel)
                 .tabItem {
-                      VStack {
-                          Image(systemName: "book.pages.fill")
-                          Text("Repo")
-                      }
-                  }
+                    VStack {
+                        Image(systemName: "book.pages")
+                        Text("Repo")
+                    }
+                }
             
             Text("Favorite")
-                  .tabItem {
-                      VStack {
-                          Image(systemName: "star")
-                          Text("Favorite")
-                      }
-                  }
+                .tabItem {
+                    VStack {
+                        Image(systemName: "star")
+                        Text("Favorite")
+                        
+                    }
+                }
         }
+        .accentColor(.purple)
     }
 }
 

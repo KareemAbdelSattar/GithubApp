@@ -1,13 +1,9 @@
-//
-//  ErrorView.swift
-//  GithubApp
-//
-//  Created by Kareem Abd El Sattar on 11/12/2023.
-//
-
 import SwiftUI
 
-struct ErrorView: View {
+struct EmptySearchView: View {
+    
+    // MARK: Properties
+    
     let title: String
     let image: String
     
@@ -27,5 +23,5 @@ struct ErrorView: View {
 }
 
 #Preview {
-    ErrorView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
+    EmptySearchView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
 }

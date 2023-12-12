@@ -1,6 +1,11 @@
 import SwiftUI
 
+// MARK: UserFollowersFollowingView
+
 struct UserFollowersFollowingView: View {
+    
+    // MARK: Properties
+
     let followersCount: Int
     let followingCount: Int
     

@@ -13,10 +13,11 @@ struct RepositoriesView: View {
                 case .loading:
                     ProgressView()
                 case .empty:
-                    ErrorView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
+                    EmptySearchView(title: "Enter The Text To find Repositories", image: "magnifyingglass")
                 case .loaded(let repositories):
                     RepositoriesList(searchText: $viewModel.search, repositories: repositories)
-
+                case .error(let error):
+                    Text(error)
                 }
             }
             .navigationTitle("Repositories")
@@ -28,5 +29,7 @@ struct RepositoriesView: View {
 
 
 #Preview {
-    RepositoriesView(viewModel: RepositoriesViewModel())
+    let repositoriesNetworking = DefaultRepositoriesNetworking()
+    let viewModel = RepositoriesViewModel(repositoriesNetworking: repositoriesNetworking)
+    return RepositoriesView(viewModel: viewModel)
 }

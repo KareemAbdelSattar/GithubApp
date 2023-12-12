@@ -1,21 +1,21 @@
 import Foundation
-import NetworkLayer
 
-struct UserNetworking: URLRequestType {
-    var endPoint: String {
-        "/users"
-    }
+protocol UserNetworking {
+    func fetchUsers() async throws -> [User]
 }
 
-
-struct UserDetailsNetworking: URLRequestType {
-    private let username: String
+struct DefaultUserNetworking: UserNetworking, URLRequestType {
+    typealias T = [User]
     
-    init(username: String) {
-        self.username = username
+    private let networkService: NetworkService
+    
+    init(networkService: NetworkService = .shared) {
+        self.networkService = networkService
     }
     
-    var endPoint: String {
-        "/users/\(username)"
+    var endPoint: String = "/users"
+    
+    func fetchUsers() async throws -> [User] {
+        try await networkService.request(self)
     }
 }
