@@ -2,26 +2,33 @@ import Foundation
 import Combine
 import NetworkLayer
 
+/// View model responsible for managing the state and data related to repositories.
 final class RepositoriesViewModel: ObservableObject {
     
     // MARK: Properties
     
+    /// Published property for tracking the search text input.
     @Published var search: String = ""
+    
+    /// Published property representing the state of the repositories view.
     @Published var state: ViewState<[Repository]> = .empty
     
+    /// Set of Combine subscriptions to manage the lifetime of observers.
     private var subscriptions = Set<AnyCancellable>()
     
     // MARK: Initializer
     
+    /// Initializes the view model and sets up the necessary bindings.
     init() {
         binding()
     }
 }
 
-// MARK: - Private Handler
+// MARK: - Private Handlers
 
 private extension RepositoriesViewModel {
     
+    /// Sets up bindings for the view model.
     func binding() {
         $search
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
@@ -37,6 +44,7 @@ private extension RepositoriesViewModel {
             .store(in: &subscriptions)
     }
     
+    /// Fetches repositories based on the provided search text.
     func fetchRepositories(search: String) async {
         changeState(.loading)
         
@@ -46,16 +54,15 @@ private extension RepositoriesViewModel {
                 .validate()
                 .decode()
             
-            // Update on main thread
-            DispatchQueue.main.async { [weak self] in
-                guard let self else { return }
-                changeState(.loaded(response.items))
-            }
+            // Update on the main thread
+            self.changeState(.loaded(response.items))
         } catch {
             changeState(.empty)
         }
     }
     
+    /// Updates the state property on the main thread.
+    /// - Parameter state: The new state to be applied.
     func changeState(_ state: ViewState<[Repository]>) {
         DispatchQueue.main.async { [weak self] in
             self?.state = state

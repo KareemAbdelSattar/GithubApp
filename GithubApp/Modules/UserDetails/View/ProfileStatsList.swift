@@ -1,6 +1,11 @@
 import SwiftUI
 
+// MARK: ProfileStatsList
+
 struct ProfileStatsList: View {
+    
+    // MARK: Properties
+
     let userDetails: UserDetails?
     
     var body: some View {

@@ -327,8 +327,8 @@
 		EBD77DA12B24787A00028B24 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
-				EB0F89662B2613C3003DDFE9 /* ViewModel */,
 				EBD77DA42B24A42B00028B24 /* View */,
+				EB0F89662B2613C3003DDFE9 /* ViewModel */,
 				EB0F89692B261A0C003DDFE9 /* Model */,
 			);
 			path = UserDetails;

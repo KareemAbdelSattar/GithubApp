@@ -1,6 +1,11 @@
 import SwiftUI
 
+// MARK: IconTitleView
+
 struct IconTitleView: View {
+    
+    // MARK: Properties
+
     let image: String
     let title: String
     let color: Color

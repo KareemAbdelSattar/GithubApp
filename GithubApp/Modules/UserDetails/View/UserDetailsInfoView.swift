@@ -1,6 +1,11 @@
 import SwiftUI
 
+// MARK: UserDetailsInfoView
+
 struct UserDetailsInfoView: View {
+    
+    // MARK: Properties
+
     let userDetails: UserDetails?
     
     var body: some View {
@@ -19,5 +24,5 @@ struct UserDetailsInfoView: View {
 }
 
 #Preview {
-    UserDetailsInfoView(userDetails: UserDetails.mock)
+    UserDetailsInfoView(userDetails: UserDetails.dummy)
 }
