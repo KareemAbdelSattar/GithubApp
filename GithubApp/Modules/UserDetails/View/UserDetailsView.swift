@@ -19,6 +19,7 @@ struct UserDetailsView: View {
                     .padding()
                 
                 ProfileStatsList(userDetails: userDetails)
+                    .navigationTitle(userDetails?.name ?? "")
                 
             case .error(let error):
                 // Show an error message if data fetching fails

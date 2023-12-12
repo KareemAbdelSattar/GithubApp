@@ -3,4 +3,54 @@
    uuid = "D1245492-BE8E-4FB2-BB96-00C8BDE519A0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE42CE07-9B4A-4071-8128-B67A922D941E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GithubApp/Networking/Core/DecodingHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "decode(_:to:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE42CE07-9B4A-4071-8128-B67A922D941E - 3f1b39b3fb966ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GithubApp.DecodingHelper.decode&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Foundation.Data, to: &#x3c4;_0_0.Type) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GithubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrhassan/Desktop/Learning/GithubApp/GithubApp/Networking/Core/DecodingHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "AE42CE07-9B4A-4071-8128-B67A922D941E - 3f1b39b3fb966ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GithubApp.DecodingHelper.decode&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: Foundation.Data, to: &#x3c4;_0_0.Type) throws -&gt; &#x3c4;_0_0"
+                  moduleName = "GithubApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/amrhassan/Desktop/Learning/GithubApp/GithubApp/Networking/Core/DecodingHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

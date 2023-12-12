@@ -217,10 +217,10 @@
 		EB1208152B287151005AC783 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EB1208162B287388005AC783 /* URLRequestType.swift */,
 				EB12080F2B28698F005AC783 /* HTTPMethod.swift */,
 				EB12081A2B287CEB005AC783 /* ResponseHelper.swift */,
 				EB1208112B286A20005AC783 /* NetworkError.swift */,
-				EB1208162B287388005AC783 /* URLRequestType.swift */,
 				EB1208182B287CC6005AC783 /* DecodingHelper.swift */,
 			);
 			path = Core;
