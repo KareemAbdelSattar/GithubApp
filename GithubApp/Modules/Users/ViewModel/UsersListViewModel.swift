@@ -1,5 +1,4 @@
 import Foundation
-import NetworkLayer
 import Combine
 
 /**
@@ -25,10 +24,13 @@ class UsersListViewModel: ObservableObject {
     /// Set to hold Combine subscriptions.
     private var subscriptions = Set<AnyCancellable>()
     
+    private let userNetwork: UserNetworking
+    
     /**
      Initializes a new instance of `UsersListViewModel` and sets up its bindings.
      */
-    init() {
+    init(userNetwork: UserNetworking = DefaultUserNetworking()) {
+        self.userNetwork = userNetwork
         binding()
     }
 }
@@ -58,9 +60,7 @@ private extension UsersListViewModel {
         self.changeState(.loading)
 
         do {
-            let fetchedUsers: [User] = try await NT.request(UserNetworking())
-                .validate()
-                .decode()
+            let fetchedUsers: [User] = try await userNetwork.fetchUsers()
             DispatchQueue.main.async {
                 self.changeState(.loaded(fetchedUsers))
             }

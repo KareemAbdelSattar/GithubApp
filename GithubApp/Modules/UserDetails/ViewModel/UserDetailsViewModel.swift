@@ -15,9 +15,6 @@ protocol UserDetailsViewModelInput {
 final class UserDetailsViewModel: ObservableObject {
     
     // MARK: Properties
-
-    /// The username for which the user details are fetched.
-    private let username: String
     
     /// Published property representing the state of the user details view.
     @Published var state: ViewState<UserDetails?> = .loading
@@ -27,13 +24,14 @@ final class UserDetailsViewModel: ObservableObject {
     
     /// Set of Combine subscriptions to manage the lifetime of observers.
     private var subscriptions = Set<AnyCancellable>()
+    private let userDetailsNetworking: UserDetailsNetworking
     
     // MARK: Initializer
     
     /// Initializes the view model and sets up the necessary bindings.
     /// - Parameter username: The username for which user details are fetched.
-    init(username: String) {
-        self.username = username
+    init(userDetailsNetworking: UserDetailsNetworking) {
+        self.userDetailsNetworking = userDetailsNetworking
         binding()
     }
     
@@ -52,10 +50,7 @@ final class UserDetailsViewModel: ObservableObject {
     /// Fetches user details based on the stored username.
     private func fetchUserDetails() async {
         do {
-            let route = UserDetailsNetworking(username: username)
-            let userDetails: UserDetails = try await NT.request(route)
-                .validate()
-                .decode()
+            let userDetails = try await userDetailsNetworking.fetchUserDetails()
             // Update on the main thread
             DispatchQueue.main.async {
                 self.state = .loaded(userDetails)

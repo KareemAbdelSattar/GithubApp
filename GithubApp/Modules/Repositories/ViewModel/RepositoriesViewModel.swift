@@ -16,10 +16,13 @@ final class RepositoriesViewModel: ObservableObject {
     /// Set of Combine subscriptions to manage the lifetime of observers.
     private var subscriptions = Set<AnyCancellable>()
     
+    private var repositoriesNetworking: RepositoriesNetworking
+    
     // MARK: Initializer
     
     /// Initializes the view model and sets up the necessary bindings.
-    init() {
+    init(repositoriesNetworking: RepositoriesNetworking) {
+        self.repositoriesNetworking = repositoriesNetworking
         binding()
     }
 }
@@ -49,10 +52,7 @@ private extension RepositoriesViewModel {
         changeState(.loading)
         
         do {
-            let route = RepositoriesNetworking(searchText: search)
-            let response: RepositoryResponse = try await NT.request(route)
-                .validate()
-                .decode()
+            let response = try await repositoriesNetworking.fetchRepositories(search)
             
             // Update on the main thread
             self.changeState(.loaded(response.items))

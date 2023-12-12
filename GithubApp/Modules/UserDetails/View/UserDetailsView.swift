@@ -41,5 +41,7 @@ struct UserDetailsView: View {
 }
 
 #Preview {
-    UserDetailsView(viewModel: UserDetailsViewModel(username: "username"))
+    let userDetailsNetworking = DefaultUserDetailsNetworking(username: "kareem")
+    let viewModel = UserDetailsViewModel(userDetailsNetworking: userDetailsNetworking)
+    return UserDetailsView(viewModel: viewModel)
 }

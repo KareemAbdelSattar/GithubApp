@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    
     var body: some View {
         TabView {
             UsersView(viewModel: UsersListViewModel())
@@ -12,7 +12,9 @@ struct HomeView: View {
                     }
                 }
             
-            RepositoriesView(viewModel: RepositoriesViewModel())
+            let repositoriesNetworking = DefaultRepositoriesNetworking()
+            let viewModel = RepositoriesViewModel(repositoriesNetworking: repositoriesNetworking)
+            RepositoriesView(viewModel: viewModel)
                 .tabItem {
                     VStack {
                         Image(systemName: "book.pages")

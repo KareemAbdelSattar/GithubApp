@@ -29,5 +29,7 @@ struct RepositoriesView: View {
 
 
 #Preview {
-    RepositoriesView(viewModel: RepositoriesViewModel())
+    let repositoriesNetworking = DefaultRepositoriesNetworking()
+    let viewModel = RepositoriesViewModel(repositoriesNetworking: repositoriesNetworking)
+    return RepositoriesView(viewModel: viewModel)
 }
