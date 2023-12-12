@@ -7,7 +7,6 @@ struct RepositoriesView: View {
     @ObservedObject var viewModel: RepositoriesViewModel
     
     var body: some View {
-        NavigationView {
             VStack {
                 switch viewModel.state {
                 case .loading:
@@ -19,11 +18,9 @@ struct RepositoriesView: View {
                 case .error(let error):
                     Text(error)
                 }
-            }
-            .navigationTitle("Repositories")
+        }
             .listStyle(.inset)
             .searchable(text: $viewModel.search)
-        }
     }
 }
 

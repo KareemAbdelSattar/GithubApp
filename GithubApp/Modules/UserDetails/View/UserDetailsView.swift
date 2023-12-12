@@ -30,8 +30,6 @@ struct UserDetailsView: View {
                 EmptyView()
             }
         }
-        .background(AppTheme.backgroundColor)
-        .toolbarTitleDisplayMode(.inline)
         .onAppear(perform: {
             // Trigger the onAppear action in the view model when the view appears
             viewModel.onAppear.send()
