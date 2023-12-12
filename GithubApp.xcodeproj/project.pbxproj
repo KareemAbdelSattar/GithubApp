@@ -230,10 +230,10 @@
 		EBD77D582B23CEFC00028B24 /* GithubApp */ = {
 			isa = PBXGroup;
 			children = (
-				EBD77D592B23CEFC00028B24 /* GithubApp.swift */,
 				EB1208002B275CDE005AC783 /* Common */,
 				EBD77D982B23DE4300028B24 /* Networking */,
 				EBD77D862B23D6EE00028B24 /* Modules */,
+				EBD77D592B23CEFC00028B24 /* GithubApp.swift */,
 				EBD77D5F2B23CEFF00028B24 /* Assets.xcassets */,
 				EBD77D622B23CEFF00028B24 /* Preview Content */,
 			);
