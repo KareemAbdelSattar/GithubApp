@@ -14,7 +14,7 @@ struct EmptySearchView: View {
               .frame(width: 100, height: 100, alignment: .center)
             .foregroundColor(.primary)
             
-            Text(title)
+            Text(title.localized)
                 .font(.subheadline)
                 .lineLimit(2)
 

@@ -8,7 +8,7 @@ struct HomeView: View {
             // Users Tab
             NavigationView(content: {
                 UsersView(viewModel: UsersListViewModel())
-                    .navigationTitle(LocalizedStringKey("users"))
+                    .navigationTitle("Users")
                     .navigationBarTitleDisplayMode(.large)
             })
             .tabItem {
