@@ -3,7 +3,7 @@ import SwiftUI
 @Observable
 class LanguageSetting {
 
-    var locale = Locale.current
+    var locale = Locale(identifier: "ar")
     
     var layout: LayoutDirection {
       isRightToLeft ? .rightToLeft : .leftToRight
@@ -13,6 +13,10 @@ class LanguageSetting {
       get {
           return isLanguageRightToLeft(language: locale.identifier)
       }
+    }
+    
+    var currentLang: String {
+        locale.identifier == "ar" ? "English" : "العربية"
     }
     
     private func isLanguageRightToLeft(language: String) -> Bool {

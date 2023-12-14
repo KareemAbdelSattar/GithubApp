@@ -9,7 +9,7 @@ struct UsersListView: View {
     var body: some View {
         List {
             ForEach(users, id: \.self) { user in
-                ZStack(alignment: .leading) {
+                ZStack {
                     let userDetailsNetworking = DefaultUserDetailsNetworking(username: user.login)
                     let viewModel = UserDetailsViewModel(userDetailsNetworking: userDetailsNetworking)
                     let userDetailsView = UserDetailsView(viewModel: viewModel)
@@ -17,7 +17,7 @@ struct UsersListView: View {
                     NavigationLink(destination: userDetailsView) { EmptyView() }.opacity(0.0)
                     
                     UserRow(user: user)
-//                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
         }
