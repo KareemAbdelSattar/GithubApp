@@ -11,6 +11,20 @@
         }
       }
     },
+    "Change Language" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغيير اللغة"
+          }
+        }
+      }
+    },
+    "Change Langue" : {
+
+    },
     "Enter The Text To find Repositories" : {
       "extractionState" : "manual",
       "localizations" : {

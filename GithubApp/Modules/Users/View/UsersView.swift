@@ -8,9 +8,15 @@ struct UsersView: View {
     // MARK: - Properties
     
     @ObservedObject var viewModel: UsersListViewModel
+    @Environment(LanguageSetting.self) var language
+    
     
     var body: some View {
         VStack {
+            Button("Change Langue") {
+                let newLang = language.locale.identifier == "en" ? "ar" : "en"
+                language.locale = Locale(identifier: newLang)
+            }
             switch viewModel.state {
             case .loading:
                 ProgressView()
