@@ -25,10 +25,3 @@ class NetworkService {
     }
 
 }
-
-
-
-private extension NetworkService {
-    
-
-}
