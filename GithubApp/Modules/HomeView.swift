@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The main view of the application, containing tabs for Users, Repositories, and Profile.
 struct HomeView: View {
-    @Environment(LanguageSetting.self) var language
+    @EnvironmentObject private var languageSettings: LanguageSetting
 
     var body: some View {
         TabView {
@@ -12,9 +12,9 @@ struct HomeView: View {
                     .navigationTitle("Users")
                     .navigationBarTitleDisplayMode(.large)
                     .toolbar {
-                        Button(language.currentLang) {
-                            let newLang = language.locale.identifier == "en" ? "ar" : "en"
-                            language.locale = Locale(identifier: newLang)
+                        Button(languageSettings.currentLanguage.description) {
+                            let newLang: AppLanguage = AppLanguage(rawValue: languageSettings.localeIdentifier) == .english ? .arabic : .english
+                            languageSettings.changeLanguage(newLang)
                         }
                     }
             })

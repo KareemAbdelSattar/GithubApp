@@ -1,31 +1,49 @@
 import SwiftUI
 
-@Observable
-class LanguageSetting {
 
-    var locale = Locale(identifier: "ar")
-    
-    var layout: LayoutDirection {
-      isRightToLeft ? .rightToLeft : .leftToRight
-    }
-    
-    var isRightToLeft: Bool {
-      get {
-          return isLanguageRightToLeft(language: locale.identifier)
-      }
-    }
-    
-    var currentLang: String {
-        locale.identifier == "ar" ? "English" : "العربية"
-    }
-    
-    private func isLanguageRightToLeft(language: String) -> Bool {
-        return Locale.Language(identifier: language).characterDirection == .rightToLeft
+class LanguageSetting: ObservableObject {
+    @AppStorage("preferredLocale") private var selectedLanguage: AppLanguage = .arabic
+
+    var localeIdentifier: String {
+        selectedLanguage.rawValue
     }
 
+    var layoutDirection: LayoutDirection {
+        selectedLanguage == .arabic ? .rightToLeft : .leftToRight
+    }
+
+    var locale: Locale {
+        Locale(identifier: localeIdentifier)
+    }
+
+    var currentLanguage: AppLanguage {
+        selectedLanguage
+    }
+    
     var uuid: String {
-      get {
-        return UUID().uuidString
-      }
+        get {
+            return UUID().uuidString
+        }
+    }
+
+    var defaultLanguage: AppLanguage = .arabic
+
+    func changeLanguage(_ language: AppLanguage) {
+        selectedLanguage = language
     }
 }
+
+enum AppLanguage: String, CustomStringConvertible {
+    case english = "en"
+    case arabic = "ar"
+    
+    var description: String {
+        switch self {
+        case .arabic:
+            "العربية"
+        case .english:
+            "English"
+        }
+    }
+}
+
