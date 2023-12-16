@@ -3,32 +3,33 @@
 
 This GitHub app is built on the Model-View-ViewModel (MVVM) architecture, taking full advantage of SwiftUI and Combine. MVVM ensures a clean and testable data flow, seamlessly connecting the view layer to the view model layer. Leverage SwiftUI's data binding capabilities for a robust and intuitive user interface. The MVVM pattern enhances testability, making it easy to write unit tests and maintain a scalable codebase.
 
-## API Reference
 
-#### BaseURl
+Light | Dark
+:-: | :-:
+![Uploading RocketSim_Recording_iPhone_14_2023-12-12_15.18.22.gif…]()
 
-```http
-  https://api.github.com
-```
+![Uploading RocketSim_Recording_iPhone_14_2023-12-12_15.24.25.gif…]()
 
-#### Get all users
-
-```http
-  GET /users
-```
-
-#### Get user
-
-```http
-  GET /users/username
-```
+## Requirements:
+### Functional:
+- Fetching and parsing data from API.
+- Listing Data.
+- Searching.
+- Navigation to Details view.
+- Dark mode.
+- Arabic Localization
 
 
-#### Search for repositories
+## Design Decisions
+- SwiftUI
+- MVVM Architecture
+- Combine
+- Network Layer
 
-```http
-  GET /search/repositories?q=search
-```
+## What could be improved
+- Add Unit Tests
+- Add Coordinator Pattern in navigation if need
+- Use Repository pattern if local data storage is needed in the future.
 
 ## Authors
 
