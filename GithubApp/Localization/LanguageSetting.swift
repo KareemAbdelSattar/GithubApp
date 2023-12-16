@@ -26,8 +26,6 @@ class LanguageSetting: ObservableObject {
         }
     }
 
-    var defaultLanguage: AppLanguage = .arabic
-
     func changeLanguage(_ language: AppLanguage) {
         selectedLanguage = language
     }

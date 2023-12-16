@@ -60,5 +60,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    @StateObject var languageSettings = LanguageSetting()
+   return HomeView()
+        .environmentObject(languageSettings)
 }
