@@ -1,38 +1,36 @@
+# GitHubApp
 
-# GithubApp
+GitHubApp is a SwiftUI-based GitHub client built on the Model-View-ViewModel (MVVM) architecture, leveraging SwiftUI and Combine for a seamless and robust user experience. The app follows best practices to ensure clean code, testability, and maintainability.
 
-This GitHub app is built on the Model-View-ViewModel (MVVM) architecture, taking full advantage of SwiftUI and Combine. MVVM ensures a clean and testable data flow, seamlessly connecting the view layer to the view model layer. Leverage SwiftUI's data binding capabilities for a robust and intuitive user interface. The MVVM pattern enhances testability, making it easy to write unit tests and maintain a scalable codebase.
-
-
-Light | Dark
+## Screenshots
+Light Mode | Dark Mode
 :-: | :-:
-![Uploading RocketSim_Recording_iPhone_14_2023-12-12_15.18.22.gif…]()
+![Light Mode](https://github.com/KareemAbdelSattar/GithubApp/blob/gif_file/Gif/light.gif) | ![Dark Mode](https://github.com/KareemAbdelSattar/GithubApp/blob/gif_file/Gif/dark.gif)
 
-![Uploading RocketSim_Recording_iPhone_14_2023-12-12_15.24.25.gif…]()
+## Features
 
-## Requirements:
-### Functional:
-- Fetching and parsing data from API.
-- Listing Data.
-- Searching.
-- Navigation to Details view.
-- Dark mode.
-- Arabic Localization
+- **Fetching and Parsing Data:** Utilizes a robust network layer to fetch and parse data from the GitHub API.
+- **Listing Data:** Displays a list of GitHub items.
+- **Searching:** Provides a search functionality for better user interaction.
+- **Navigation to Details:** Allows users to navigate to a detailed view for more information.
+- **Dark Mode:** Supports both light and dark modes for a personalized user experience.
+- **Arabic Localization:** Offers localization for Arabic-speaking users.
 
+## Architecture and Design Decisions
 
-## Design Decisions
-- SwiftUI
-- MVVM Architecture
-- Combine
-- Network Layer
+- **SwiftUI:** Utilizes SwiftUI for building the user interface, taking advantage of its declarative syntax.
+- **MVVM Architecture:** Follows the Model-View-ViewModel architecture pattern for clean separation of concerns.
+- **Combine Framework:** Integrates Combine to handle asynchronous and event-driven code.
+- **Network Layer:** Implements a well-designed network layer for efficient API communication.
 
-## What could be improved
-- Add Unit Tests
-- Add Coordinator Pattern in navigation if need
-- Use Repository pattern if local data storage is needed in the future.
+## Areas for Improvement
 
-## Authors
+- **Unit Tests:** Enhance the codebase by adding unit tests to ensure the reliability of the application.
+- **Coordinator Pattern:** Consider implementing the Coordinator pattern for improved navigation if the application complexity grows.
+- **Repository Pattern:** Introduce the Repository pattern if local data storage becomes a requirement in the future.
 
-- [@KareemAbdelSattar](https://github.com/KareemAbdelSattar)
+## Author
 
-- [![Linkedin: Kareem Abd El Sattar](https://img.shields.io/badge/-KareemAbdElSattar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kareem/)](https://www.linkedin.com/in/kareem-abd-elsattar-448606146/) 
+- [Kareem Abd El Sattar](https://github.com/KareemAbdelSattar)
+
+[![Linkedin: Kareem Abd El Sattar](https://img.shields.io/badge/-KareemAbdElSattar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kareem/)](https://www.linkedin.com/in/kareem-abd-elsattar-448606146/) 
