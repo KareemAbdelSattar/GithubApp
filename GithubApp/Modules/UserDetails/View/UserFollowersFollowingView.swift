@@ -34,7 +34,7 @@ struct CountTitleView: View {
             }
             .foregroundStyle(.primary)
             
-            Text(title)
+            Text(title.localized)
                 .foregroundStyle(.secondary)
         }
     }

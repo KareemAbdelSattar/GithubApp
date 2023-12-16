@@ -45,7 +45,7 @@ struct IconCountRow: View {
             }
             .frame(width: 30, height: 30)
             
-            Text(title)
+            Text(title.localized)
             
             Spacer()
             

@@ -8,7 +8,7 @@ struct UsersView: View {
     // MARK: - Properties
     
     @ObservedObject var viewModel: UsersListViewModel
-    
+        
     var body: some View {
         VStack {
             switch viewModel.state {
