@@ -58,12 +58,10 @@ private extension UsersListViewModel {
      */
     private func fetchUsers() async {
         self.changeState(.loading)
-
+        
         do {
             let fetchedUsers: [User] = try await userNetwork.fetchUsers()
-            DispatchQueue.main.async {
-                self.changeState(.loaded(fetchedUsers))
-            }
+            self.changeState(.loaded(fetchedUsers))
         } catch {
             changeState(.error(error.localizedDescription))
         }

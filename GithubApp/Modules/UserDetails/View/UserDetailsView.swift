@@ -22,9 +22,9 @@ struct UserDetailsView: View {
                     .navigationTitle(userDetails?.name ?? "")
                 
             case .error(let error):
-                // Show an error message if data fetching fails
-                // TODO: - Add Error Screen
-                Text(error)
+                ErrorView(title: error) {
+                    viewModel.onAppear.send()
+                }
             case .empty:
                 // Handle the case when there is no data to display
                 // TODO: - Handle Empty Case
